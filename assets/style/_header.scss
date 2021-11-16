@@ -1,0 +1,60 @@
+header {
+  height: 100vh;
+  background-color: pink;
+  position: relative;
+}
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  img {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+.logo {
+  color: $light;
+  font-size: $title-section;
+}
+
+nav {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1440px;
+  //border-radius: 0 0 1rem 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+
+  ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 70px;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      a {
+        padding: 15px;
+        text-decoration: none;
+        color: $light;
+        text-transform: uppercase;
+        transition: 0.3s;
+        font-size: $link;
+
+        &:hover {
+          color: $cta;
+        }
+      }
+    }
+  }
+}
