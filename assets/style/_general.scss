@@ -10,8 +10,9 @@ html {
 
 body {
   font-size: $base;
-  font-family: sans-serif;
-  background-color: $light;
+  font-family: 'Shippori Antique B1', sans-serif;
+  background-color: $dark;
+  color: $light;
 }
 
 .container {
@@ -23,21 +24,41 @@ body {
 
 section {
   text-align: center;
+  height: 100%;
 
-  h1 {
+  h2 {
+    text-align: left;
+    margin: 60px 0 60px 100px;
     font-size: $title;
     position: relative;
 
     &:after {
       content: '';
       position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
       z-index: -1;
       background-color: $cta;
-      width: 15%;
-      height: 10px;
+      width: 80%;
+      height: 5px;
     }
+  }
+}
+
+.price-block {
+  display: flex;
+  justify-content: space-around;
+  height: 300px;
+
+  .price-web, .price-graphic {
+    padding: 40px;
+    border-radius: 1rem;
+    box-shadow: rgba(246, 238, 2, 0.2) 0px 2px 8px 0px;
+  }
+
+  ul {
+    list-style-type: none;
+    text-align: left;
   }
 }
