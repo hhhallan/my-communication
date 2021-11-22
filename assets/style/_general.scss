@@ -10,8 +10,13 @@ html {
 
 body {
   font-size: $base;
-  font-family: sans-serif;
-  background-color: $light;
+  font-family: 'Shippori Antique B1', sans-serif;
+  background-color: $dark;
+  color: $light;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -23,21 +28,88 @@ body {
 
 section {
   text-align: center;
+  height: 100%;
 
-  h1 {
+  h2 {
+    text-align: left;
+    margin: 60px 0 60px 100px;
     font-size: $title;
     position: relative;
 
     &:after {
       content: '';
       position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
       z-index: -1;
       background-color: $cta;
-      width: 15%;
-      height: 10px;
+      width: 80%;
+      height: 5px;
+    }
+  }
+}
+
+.price-block {
+  display: flex;
+  justify-content: space-around;
+  height: 300px;
+
+  .price-web, .price-graphic {
+    padding: 40px;
+    border-radius: 1rem;
+    box-shadow: rgba(246, 238, 2, 0.2) 0px 2px 8px 0px;
+  }
+
+  ul {
+    height: 100%;
+    list-style-type: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    li {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+#missions {
+  margin-bottom: 100px;
+
+
+  .missions-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    ul {
+      height: 100%;
+      list-style: none;
+
+      li {
+        margin-bottom: 15px;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+#footer {
+  height: 80px;
+  border-top: 1px solid $light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  i {
+    font-size: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      color: $cta;
     }
   }
 }
