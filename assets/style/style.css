@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 *, :before, :after {
   margin: 0;
   padding: 0;
@@ -14,6 +15,10 @@ body {
   font-family: "Shippori Antique B1", sans-serif;
   background-color: #131515;
   color: #F7F7FF;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -56,8 +61,48 @@ section h2:after {
   box-shadow: rgba(246, 238, 2, 0.2) 0px 2px 8px 0px;
 }
 .price-block ul {
+  height: 100%;
   list-style-type: none;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.price-block ul li {
+  margin-bottom: 15px;
+}
+
+#missions {
+  margin-bottom: 100px;
+}
+#missions .missions-block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#missions .missions-block ul {
+  height: 100%;
+  list-style: none;
+}
+#missions .missions-block ul li {
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+#footer {
+  height: 80px;
+  border-top: 1px solid #F7F7FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer i {
+  font-size: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#footer i:hover {
+  color: #FFD447;
 }
 
 header {
@@ -87,6 +132,8 @@ header {
 .logo {
   color: #F7F7FF;
   font-size: 2.4rem;
+  font-family: "Lobster", sans-serif;
+  cursor: pointer;
 }
 
 nav {

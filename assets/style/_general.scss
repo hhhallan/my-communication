@@ -15,6 +15,10 @@ body {
   color: $light;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
@@ -58,7 +62,54 @@ section {
   }
 
   ul {
+    height: 100%;
     list-style-type: none;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    li {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+#missions {
+  margin-bottom: 100px;
+
+
+  .missions-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    ul {
+      height: 100%;
+      list-style: none;
+
+      li {
+        margin-bottom: 15px;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+#footer {
+  height: 80px;
+  border-top: 1px solid $light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  i {
+    font-size: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      color: $cta;
+    }
   }
 }
